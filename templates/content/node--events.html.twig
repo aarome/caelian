@@ -73,11 +73,13 @@
 
 <article{{attributes.addClass(classes)}}>
 
-	{% if content.field_events_event_series|render is not empty %}
-		{{ content.field_events_event_series }}
-	{% else %}
-		{{ content.field_events_event_type }}
-	{% endif %}
+	{# {% if content.field_events_event_series|render is not empty %}
+					{{ content.field_events_event_series }}
+				{% else %}
+					{{ content.field_events_event_type }}
+				{% endif %} #}
+	{{ content.field_events_event_series }}
+	{{ content.field_events_event_type }}
 
 	<h1 class="title serif">{{ label }}</h1>
 
