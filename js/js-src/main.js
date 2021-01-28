@@ -2,6 +2,8 @@
 var el = document.querySelectorAll('.field-page-internal-link > a');
 var quickNewsLinks = document.querySelectorAll('.field-quick-news-links a')
 var zoomLinks = document.querySelectorAll('.field-events-zoom-link a')
+var sofZoomLinks = document.querySelectorAll('.field-sof-zoom-link a')
+
 
 for (i = 0; i < el.length; ++i) {
   el[i].innerHTML = '<span></span>';
@@ -14,6 +16,11 @@ for (i = 0; i < quickNewsLinks.length; ++i) {
 for (i = 0; i < zoomLinks.length; ++i) {
   zoomLinks[i].innerHTML = '<span></span>';
 }
+
+for (i = 0; i < sofZoomLinks.length; ++i) {
+  sofZoomLinks[i].innerHTML = '<span></span>';
+}
+
 
 // Card links
 // const card = document.querySelectorAll(".path-news-far-afield .card-inner")

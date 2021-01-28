@@ -11,11 +11,6 @@
   margin-top: 1.2rem;
 }
 
-.card.watch .read-more {
-  background-image: url(../images/arrow_small_external.svg);
-  height: 2rem;
-}
-
 .path-events-zoom-videos .read-more {
   background-image: url(../images/arrow_small_external.svg);
   height: 2rem;
@@ -23,7 +18,9 @@
 }
 
 .path-news-far-afield,
-.path-attualita-notizie-recenti {
+.path-attualita-notizie-recenti,
+.path-events-watch,
+.path-society-of-fellows-watch {
   .read-more {
     background-image: url(../images/arrow_small_external.svg);
   }
