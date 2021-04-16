@@ -36,3 +36,40 @@
 .front.events .slide__caption {
   padding-top: 1rem;
 }
+
+// Slideshow buttons.
+// Fixes incorrectly sized right arrow in slick views.
+.slick-arrow {
+  border-radius: 0%;
+  opacity: 1;
+}
+
+.slick-prev {
+  margin-left: 1rem;
+  background-image: url(../images/arrow_large_black_left.svg);
+}
+
+.slick-next:after {
+  // margin-right: 1rem;
+  background-image: url(../images/arrow_large_black_right.svg);
+    background-repeat: no-repeat;
+    text-indent: -8999px;
+    // color: none;
+}
+
+.slick-prev,
+.slick-next {
+  // background-repeat: no-repeat;
+  // text-indent: -8999px;
+  // color: none;
+}
+
+.slick-arrow {
+  filter: invert(90%);
+  opacity: 0.85;
+}
+
+.slick-arrow:hover,
+.slick-arrow:hover::before {
+  filter: invert(100);
+}

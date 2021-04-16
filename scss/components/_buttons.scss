@@ -27,34 +27,6 @@
   }
 }
 
-// Slideshow buttons.
-.slick-prev {
-  margin-left: 1rem;
-  background-image: url(../images/arrow_large_black_left.svg);
-}
-
-.slick-next {
-  margin-right: 1rem;
-  background-image: url(../images/arrow_large_black_right.svg);
-}
-
-.slick-prev,
-.slick-next {
-  background-repeat: no-repeat;
-  text-indent: -8999px;
-  color: none;
-}
-
-.slick-arrow {
-  filter: invert(90%);
-  opacity: 0.85;
-}
-
-.slick-arrow:hover,
-.slick-arrow:hover::before {
-  filter: invert(100);
-}
-
 // Home page buttons.
 .rome-prize-cta .field-page-section-links .field__item:nth-child(2) a {
   border: none;
