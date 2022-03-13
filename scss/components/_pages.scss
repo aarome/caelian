@@ -443,3 +443,24 @@ body.news-features {
     padding-bottom: 1rem !important;
   }
 }
+
+// Views headers
+.publications header {
+  border-bottom: 1px solid gray;
+  //padding: 2rem;
+  padding-bottom: 1rem;
+  margin: 3rem 15% 3rem 30%;
+  .field-title {
+    @include title-sans;
+    margin-bottom: 1rem;
+  }
+  .body {
+    padding-right: 0 !important;
+  }
+
+  .body p {
+    @include body;
+    font-family: "Dignitas Italic";
+    @include font-size(1.2rem);
+  }
+}

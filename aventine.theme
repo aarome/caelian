@@ -5,10 +5,12 @@
  * Functions to support theming in the aventine theme.
  */
 
+use Drupal\Component\Utility\Html;
 use Drupal\Core\Url;
 
 /**
  * Implements template_preprocess_html().
+ *
  * @param array $variables
  */
 function aventine_preprocess_html(&$variables) {
@@ -16,11 +18,12 @@ function aventine_preprocess_html(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   $path_alias = \Drupal::service('path_alias.manager')->getAliasByPath($current_path);
   $path_alias = ltrim($path_alias, '/');
-  $variables['attributes']['class'][] = 'path-' . \Drupal\Component\Utility\Html::cleanCssIdentifier($path_alias);
+  $variables['attributes']['class'][] = 'path-' . Html::cleanCssIdentifier($path_alias);
 }
 
 /**
  * Implements template_preprocess_page.
+ *
  * @param array $variables
  */
 function aventine_preprocess_page(&$variables) {
@@ -30,11 +33,12 @@ function aventine_preprocess_page(&$variables) {
 
 /**
  * Implements template_preprocess_node.
+ *
  * @param array $variables
  */
-//function aventine_preprocess_node(&$variables) {
-//
-//}
+function aventine_preprocess_node(&$variables) {
+  xdebug_break();
+}
 
 /**
  * Change the link title of the language block.
@@ -44,6 +48,9 @@ function aventine_preprocess_links__language_block(&$variables) {
   $variables['links']['it']['link']['#title'] = 'IT';
 }
 
+/**
+ *
+ */
 function aventine_preprocess_region(&$variables) {
   $variables['url'] = $_SERVER['REQUEST_URI'];
   $variables['#cache']['contexts'][] = 'url.path';
