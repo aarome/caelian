@@ -70,22 +70,15 @@
  *   in different view modes.
  */
 #}
-
-{%
-  set classes = [
-		'foo'
-  ]
-%}
-
-<div{{attributes.addclass(classes)}}>
-	{% if not page %}
-		<h2{{title_attributes}}>
-			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
-		</h2>
-	{% endif %}
-
-	<div{{content_attributes}}>
-		{{ content }}
+<article{{attributes.addClass('card-home')}}>
+	{{ node.type.entity.label }}
+	<div class="card-home__inner">
+		{{ content.field_news_features_images.0 }}
+		<div class='card-home__body'>
+			<div class="card-home__title">{{ label }}</div>
+			{# {{ content.field_news_features_summary }} #}
+			<a href="{{ url }}">Read more
+			</a>
+		</div>
 	</div>
-
-</div>
+</article>

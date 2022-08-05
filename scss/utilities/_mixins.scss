@@ -29,9 +29,23 @@ $resource-title: $tradegothiccond;
   max-width: $max-vw;
 }
 
+@mixin global-padding {
+  padding: 0 1rem;
+}
+
 @mixin global-margin-image {
   margin: 0 auto;
   max-width: $wide;
+}
+
+@mixin block-display-title {
+  font-family: $display-serif;
+  @include font-size($large);
+}
+
+@mixin featured-content-title {
+  font-family: $display-serif;
+  @include font-size($medium);
 }
 
 @mixin inner-padding-tablet {

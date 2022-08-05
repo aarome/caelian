@@ -1,0 +1,24 @@
+/* home page blocks, includes mission, ....
+*/
+
+body.home .region-content .block {
+  @include global-margin;
+  &:first-of-type {
+    display: none;
+  }
+}
+
+body.home .block__mission {
+  padding: 3rem;
+  background-color: lightgreen;
+}
+
+body.home .block__mission .block__title {
+  @include block-display-title;
+}
+
+body.home .card__home {
+  margin-bottom: 1rem;
+  padding: 3rem;
+  background-color: lightcoral;
+}
