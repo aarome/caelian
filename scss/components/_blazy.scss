@@ -1,27 +1,3 @@
-.b-lazy,
-.b-responsive {
-  // opacity: 0 !important;
-  transition: opacity 500ms ease-in-out !important;
-}
-
-.b-loaded {
-  // opacity: 1 !important;
-  transition: opacity 500ms ease-in-out !important;
-}
-
-/* Needed to display preloader with CSS BG image, otherwise hidden. */
-.b-loaded,
-.b-error,
-.media--loading.media--background {
-  opacity: 1;
-}
-
-// turn off the hideous preloader
-.media--loading::before {
-  display: none !important;
-  animation: none !important;
-}
-
-.media img {
-  background: $light-brown !important;
+.is-b-loading:not(.is-b-loaded):not([data-animation])::before {
+  display: none;
 }
