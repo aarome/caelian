@@ -7,6 +7,9 @@ for (i = 0; i < el.length; ++i) {
 const box = document.querySelector('.marquee img');
 const rect = box.getBoundingClientRect();
 
+const tile = document.querySelector('.marquee .homepage-card__body');
+const foo = tile.getBoundingClientRect();
+
 function isInViewport(element) {
   return (
       rect.top >= 0 &&
@@ -14,6 +17,10 @@ function isInViewport(element) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
+}
+
+function loadTile(element) {
+
 }
 
 console.log(rect);
