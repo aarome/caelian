@@ -79,13 +79,16 @@
 		{% endif %}
 	</div>
 
-	<div class='card-home__body'>
+	<div
+		class='card-home__body'>
 
-		{% if content.field_events_event_series|render is not empty %}
-			{{ content.field_events_event_series }}
-		{% else %}
-			{{ content.field_events_event_type }}
-		{% endif %}
+		{# {% if content.field_events_event_series|render is not empty %}
+							{{ content.field_events_event_series }}
+						{% else %}
+							{{ content.field_events_event_type }}
+						{% endif %} #}
+
+		{{ content.field_events_event_type }}
 
 		<div class="card-home__title serif">{{ label }}</div>
 

@@ -1,0 +1,65 @@
+.marquee {
+  position: relative;
+}
+
+.marquee .homepage-card__body {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: lightyellow;
+  padding: 2rem;
+  margin: 1rem;
+  max-width: 50%;
+  opacity: 0.9;
+}
+
+.marquee img {
+  width: 100%;
+}
+
+.homepage-card__title {
+  @include title-serif;
+  line-height: 0.9;
+  margin: 1rem 0;
+}
+
+.homepage-card__body .field-events-event-type {
+  @include label;
+}
+
+.homepage-card__body .field-events-event-dates,
+.homepage-card__location {
+  @include body;
+  @include font-size($small);
+  line-height: 1.2;
+}
+
+#block-block-content-f75f6ab6-7e45-4b8b-914a-ee5783e64a09 {
+  display: none;
+}
+
+.field-media-image {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding-top: 73%;
+}
+
+.field-media-image img {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 1000ms;
+}

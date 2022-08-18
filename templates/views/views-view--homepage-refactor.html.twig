@@ -30,8 +30,13 @@
  * @see template_preprocess_views_view()
  */
 #}
+{%
+  set classes = [
+    'homepage-wrapper',
+  ]
+%}
 
-<div{{attributes}}>
+<div{{attributes.addClass(classes)}}>
 	{% if rows -%}
 		{{ rows }}
 	{% elseif empty -%}

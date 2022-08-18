@@ -1,24 +1,29 @@
 /* home page blocks, includes mission, ....
 */
 
-body.home .region-content .block {
+.homepage-container {
   @include global-margin;
-  &:first-of-type {
-    display: none;
-  }
+  padding: 0 1rem;
 }
 
-body.home .block__mission {
-  padding: 3rem;
-  background-color: lightgreen;
-}
+// body.home .region-content .block {
+//   @include global-margin;
+//   &:first-of-type {
+//     display: none;
+//   }
+// }
 
-body.home .block__mission .block__title {
-  @include block-display-title;
-}
+// body.home .block__mission {
+//   padding: 3rem;
+//   background-color: lightgreen;
+// }
 
-body.home .card__home {
-  margin-bottom: 1rem;
-  padding: 3rem;
-  background-color: lightcoral;
-}
+// body.home .block__mission .block__title {
+//   @include block-display-title;
+// }
+
+// body.home .card__home {
+//   margin-bottom: 1rem;
+//   padding: 3rem;
+//   background-color: lightcoral;
+// }

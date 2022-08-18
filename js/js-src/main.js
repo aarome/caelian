@@ -4,6 +4,21 @@ for (i = 0; i < el.length; ++i) {
   el[i].innerHTML = "<span></span>";
 }
 
+const box = document.querySelector('.marquee img');
+const rect = box.getBoundingClientRect();
+
+function isInViewport(element) {
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+console.log(rect);
+
+
 (function ($) {
   // add markup to region-header
   var $window = $(window);

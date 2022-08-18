@@ -70,32 +70,35 @@
  *   in different view modes.
  */
 #}
+{%
+  set classes = [
+    node_type|clean_class,
+		'homepage-card',
+		'marquee'
+  ]
+%}
 
-<article{{attributes.addClass('card-home')}}>
-	<div class="card-image-wrapper">
+<article{{attributes.addClass(classes,'card-home')}}>
+	<div class="homepage-card__image">
 		{{ content.field_events_image }}
-		{% if node.field_events_canceled.0.value %}
-			{{ content.field_events_canceled }}
-		{% endif %}
 	</div>
+	<div
+		class='homepage-card__body'>
+		{# {% if content.field_events_event_series|render is not empty %}
+															{{ content.field_events_event_series }}
+														{% else %}
+															{{ content.field_events_event_type }}
+														{% endif %} #}
+		{{ content.field_events_event_type }}
 
-	<div class='card-home__body'>
-
-		{% if content.field_events_event_series|render is not empty %}
-			{{ content.field_events_event_series }}
-		{% else %}
-			{{ content.field_events_event_type }}
-		{% endif %}
-
-		<div class="card-home__title serif">{{ label }}</div>
-
+		<div class="homepage-card__title serif">{{ label }}</div>
 		{% if content.field_events_event_dates_overrid|render is not empty %}
 			{{ content.field_events_event_dates_overrid }}
 		{% else %}
 			{{ content.field_events_event_dates }}
 		{% endif %}
 
-		<div class="card-home__location">
+		<div class="homepage-card__location">
 			{% spaceless %}
 				{{ content.field_events_rel_places[0]['#node'].field_places_address.locality }}
 			{% endspaceless %}
@@ -103,9 +106,5 @@
 
 		<a href="{{ url }}">Read more<span></span>
 		</a>
-
-		{{ node_type }}
-
-
 	</div>
 </article>
